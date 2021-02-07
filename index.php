@@ -1,6 +1,8 @@
 <?php 
 
-$data = $_POST['wifi'];
+$key = 'wifi';
+$cond = ((!empty($_POST)) && (isset($_POST[$key])));
+$data = $cond ? $_POST[$key] : null;
 $arr = json_decode($data);
 $str = json_encode($arr,JSON_PRETTY_PRINT);
 $json = ('<pre>'.$str.'</pre>');
