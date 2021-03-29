@@ -5,6 +5,8 @@ import json
 import webbrowser 
 
 
+print('Scanning...')
+
 code , pr , prs , key  = 'cp1252' , 'profile' , 'profiles' , 'Password'
 
 commands = ['netsh', 'wlan', 'show', prs, pr, None, 'key=clear']
