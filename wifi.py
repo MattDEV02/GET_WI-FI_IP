@@ -5,8 +5,6 @@ import json
 import webbrowser 
 
 
-print('Scanning...')
-
 code , pr , prs , key  = 'cp1252' , 'profile' , 'profiles' , 'Password'
 
 commands = ['netsh', 'wlan', 'show', prs, pr, None, 'key=clear']
@@ -18,6 +16,8 @@ profile_names = (re.findall("Tutti i profili utente    : (.*)\r", command_output
 commands.remove(prs)
 
 wifi_list = []
+
+print('Scanning...')
 
 if len(profile_names) > 0:
    for name in profile_names:
