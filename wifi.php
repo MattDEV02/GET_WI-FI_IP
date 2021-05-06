@@ -1,6 +1,6 @@
 <?php 
 
-$key = 'wifi';
+$key = 'wifi'; //
 $cond = ((!empty($_POST)) && (isset($_POST[$key])));
 if($cond) {
    $data = $_POST[$key];
